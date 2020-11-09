@@ -1,0 +1,430 @@
+ 
+   /*********************************/
+  /*********1.DOWNLOAD FONTS ******/
+ /********************************/
+
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNovaA-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNovaA-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} 
+   /*********************************/
+  /***********1.GLOBAL CSS**********/
+ /********************************/
+ 
+body {
+    position: relative;
+    margin: 0; 
+    padding: 0;
+    font-family: 'Proxima Nova';
+    overflow-x: hidden;
+    font-size: 1.4rem;
+}
+html {
+    font-size: 62.5%;
+    line-height: 25px;
+    line-height: 2.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+.container-fluid{ 
+   padding-right: 0; 
+   padding-left: 0;  
+}
+
+
+   /*********************************/
+  /***********3.HEADER CSS*********/
+ /********************************/
+
+.header-area {
+  background: #2f364a; 
+  width: 100%;
+}
+.logo {
+  padding-left: 2rem;
+}
+.menu-center {
+  text-align: center;
+}
+.menu-right ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.menu-right ul li{
+  position:relative;
+}
+.menu-center a, .menu-right ul li a {
+  font-size: 1.4rem;
+  color: #78829d;
+  padding: 1rem 1rem;
+  display: inline-block;
+  transition: 0.3s;
+  text-transform: capitalize;
+  font-weight: normal;
+  display: block ruby;
+}
+.menu-right ul li a.active{
+  background: #15a4fa;
+  color: #fff;
+}
+.menu-center a:hover,
+.menu-right ul li a:hover{
+  color: #fff;
+}
+.menu-right ul li a:hover i{
+  background: #2F364A;
+  color: #fff;
+}
+.menu-right ul li a i {
+  font-size: 1.4rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2.1rem;
+  background: #fff;
+  border-radius: 50%;
+  color: #78829d;
+  transition: 0.3s;
+}
+/*===dropdown menu */
+.menu-right ul ul {
+  flex-direction: column;
+  position: absolute;
+  top: 15rem;
+  background: #15A4FA;
+  display: block;
+  right: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 999;
+  width: 100%;
+}
+.menu-right ul ul li a { 
+  color: #fff;
+  display: flex;
+}
+.menu-right ul ul li a i{
+  background: transparent;
+  color: #fff;
+}
+.menu-right ul ul li a:hover{
+  background: #2F364A
+}
+.menu-right ul li:hover > ul{
+  visibility: visible;
+  opacity: 1;
+  top: 5rem;
+}
+
+.FixedHeader {
+  position: fixed; 
+  top: 0;
+  left: 0;  
+  width: 100%;
+  z-index: 99;
+}
+
+   /*********************************/
+  /**********4.LEFT SIDE CSS********/
+ /********************************/
+ 
+
+.left-site .row {
+  flex-direction: column;
+}
+.left-site {
+  background: #1f2637;
+  overflow: scroll;
+  height: calc(100vh - 96px); 
+  overflow-x: hidden;
+}
+
+/*left btn*/
+.left-btn {
+  padding: 4rem 0; 
+  border-bottom: 0.7rem solid #19202e;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+.cros-btn {
+  display: none;
+}
+.left-btn a {
+  padding: 1rem 4rem;
+  background: #f2795a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+.left-btn a:hover { 
+  background: #f2795ac4; 
+}
+
+/*left first menu */
+.left-third-menu ul li,
+.left-second-menu ul li,
+.left-first-menu ul li {
+  margin: 0.3rem 0;
+} 
+.left-second-menu ul li a,
+.left-first-menu ul li a { 
+  display: block;
+  padding: 1rem 2.2rem;
+  color: #78829d;
+  transition: 0.3s;
+}
+.left-second-menu ul li a:hover,
+.left-first-menu ul li a:hover {
+  background: #15a4fa; 
+  color: #fff;
+}
+.left-third-menu,
+.left-second-menu,
+.left-first-menu {
+  border-bottom: 0.7rem solid #19202e;
+}
+
+/*left second menu*/
+.left-second-menu ul li a span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: red;
+  border-radius: 50%;
+}
+.left-second-menu ul li:nth-child(1) a span{
+  background: #e64c66;
+}
+.left-second-menu ul li:nth-child(2) a span{
+  background: #ffab00;
+}
+.left-second-menu ul li:nth-child(3) a span{
+  background: #00bfdd;
+}
+.left-second-menu ul li:nth-child(4) a span{
+  background: #7874cf;
+}
+
+/*left third menu */
+
+
+.left-third-menu ul li i {
+  color: #78829d;
+  line-height: 2.2rem;
+}
+.left-third-menu ul li {
+  display: flex;
+  padding: 1rem 2.2rem;
+}
+.left-third-menu ul li p{ 
+  display: block; 
+  color: #78829d;
+  transition: 0.3s;
+}
+.left-third-menu ul li p span {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+ 
+
+
+.FixedLeft {
+  position: fixed;
+  bottom: 5rem;
+  left: 0;
+  width: 16.7%;
+}
+
+
+
+   /*********************************/
+  /**********5.RIGHT CSS***********/
+ /********************************/
+
+
+
+.main-mixi {
+  overflow: scroll;
+  height: calc(100vh - 221px);
+  overflow-x: hidden;
+}
+.main-popup-menu,
+.main-header {
+  background: #eef1f7;
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header a i {
+  font-size: 2.5rem;
+  color: #15A4FA;
+  border: 0.2rem solid #15A4FA;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+  display: none;
+}
+.main-header h2 {
+  font-size: 2.5rem;
+  color: #444c63;
+  padding: 2rem;
+}
+
+.main-menu ul {
+  display: flex;
+  padding-left: 2rem;
+}
+.main-popup-menu {
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.1rem solid #dadfea;
+  border-bottom: 0.1rem solid #dadfea;
+  padding: 1rem 0;
+}
+.main-menu ul li {
+  margin-right: 0.5rem;
+}
+.main-menu ul li button {
+  display: inline-block;
+  padding: 0.5rem 1rem; 
+  border-radius: 2rem;
+  color: #8c97b2;
+  transition: 0.3s;
+  border: none;
+  outline: 0;
+} 
+.main-menu ul li button.active,
+.main-menu ul li button:hover{
+  background: #97b3ce;
+  color: #fff;
+} 
+.main-search {
+  flex: 0 0 40%; 
+  position: relative;
+}
+.main-search [type="search"] {
+  width: 90%;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+  border: 0.1rem solid #c7cddb;
+  text-transform: capitalize;
+  color: #8c97b2;
+}
+.main-search i {
+  position: absolute;
+  top: 27%;
+  right: 14%;
+  font-size: 1.6rem;
+  color: #8c97b2;
+}
+
+
+
+
+/*main area content*/
+.right-img {
+  width: 100%;
+  height: auto;
+}
+.right-img img{
+  width: 100%;
+  height:100%;
+  object-fit: cover
+}
+.right-content { 
+  padding: 0 2rem;
+  margin-top: 2rem; 
+  column-count: 5;
+  overflow: hidden;
+}
+.right-item {
+  display: inline-block;
+}
+.content h3 {
+  font-size: 1.6rem;
+  color: #444c63;
+  margin: 2rem 0 0.5rem 0;
+}
+.content p {
+  color: #6f7d95;
+}
+.item-icon i {
+  color: #ffab00;
+  margin-top: 1.5rem;
+}
+
+.right-row {
+  flex: 0 0 18%;
+  margin-bottom: 3rem;
+}
+
+   /*********************************/
+  /**********6.FOOTER CSS***********/
+ /********************************/
+
+
+.footer-area{
+  background: #181e2c
+}
+.footer {
+  text-align: right; 
+}
+.footer a i {
+  color: #fff;
+  width: 6rem;
+  text-align: center;
+  line-height: 4.4rem;
+  background: #1f2637;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+.footer a i.active,
+.footer a i:hover{ 
+  background: #15a4fa; 
+}
+.FixedFooter {
+  position: fixed; 
+  bottom: 0;
+  left: 0;  
+  width: 100%;
+  z-index: 99;
+}

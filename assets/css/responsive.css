@@ -1,0 +1,55 @@
+@media all and (max-width: 991px){
+
+	.main-header a i{
+		display: block;
+	}
+	.cros-btn {
+		display: block;
+
+	}
+	.left-site { 
+		position: fixed;
+		width: 100%;
+		z-index: 99;
+		left: -100%;
+		transition: 0.7s;
+	}
+
+	.right-content { 
+		column-count: 4; 
+	}
+
+
+}
+@media all and (max-width: 767px){
+
+	.right-content { 
+		column-count: 3; 
+	}
+	.main-popup-menu { 
+		flex-direction: column; 
+	}
+	.main-menu {
+		margin-bottom: 1rem;
+	}
+}
+
+
+@media all and (max-width: 576px){
+
+	.menu-right ul {
+		flex-direction: column;
+	}
+	.right-content { 
+		column-count: 2; 
+	}
+}
+@media all and (max-width: 450px){
+ 
+	.right-content { 
+		column-count: 1; 
+	}
+	.right-item { 
+		text-align: center;
+	}
+}
